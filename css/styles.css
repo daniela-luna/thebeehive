@@ -11,6 +11,10 @@ h1 {
   font-size: 70px;
 }
 
+h2 {
+  color: white;
+}
+
 .site-footer {
   background-color: gray;
   color: white;

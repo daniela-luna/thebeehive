@@ -1,0 +1,17 @@
+#beehive-hero {
+  background-image: url(../img/header.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+h1 {
+  color: white;
+}
+
+.site-footer {
+  background-color: gray;
+  color: white;
+  padding: 20px;
+}

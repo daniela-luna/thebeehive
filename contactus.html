@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <title>The Beehive</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">The Beehive</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active pr-4">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item pr-4">
+              <a class="nav-link" href="memberships.html">Memberships</a>
+            </li>
+            <li class="nav-item pr-4">
+              <a class="nav-link">Drop In</a>
+            </li>
+            <li class="nav-item pr-4">
+              <a class="nav-link">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="home-heading mt-4">Contact The Beehive</h2>
+          <p class="mt-4">
+            We look forward to helping you! If you have a question, please
+            submit it using our form.
+          </p>
+          <br />
+          <h3 class="home-heading">Call Us</h3>
+          <p>(123)-456-7890</p>
+        </div>
+        <div class="col-md-6">
+          <div class="card mt-4 mb-5">
+            <div class="card-body">
+              <form id="contactForm">
+                <div class="row">
+                  <input
+                    class="form-control ml-3 mr-3"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="row mt-4">
+                  <input
+                    class="form-control ml-3 mr-3"
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="row mt-4">
+                  <textarea
+                    class="form-control ml-3 mr-3"
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    rows="8"
+                  ></textarea>
+                </div>
+                <div class="row mt-4">
+                  <button class="btn btn-primary ml-3" type="submit">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Address</h5>
+            <p>
+              123 Place
+              <br />
+              Place, XY 12345
+              <br />
+              (123)-456-7890
+              <br />
+              thebeehive@thebeehive.com
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Hours</h5>
+            <ul class="list-unstyled">
+              <li>Saturday: 7AM - 7PM</li>
+              <li>Sunday 7AM - 7PM</li>
+              <li>Monday 7AM - 9PM</li>
+              <li>Tuesday 7AM - 9PM</li>
+              <li>Wednesday 7AM - 9PM</li>
+              <li>Thursday 7AM - 9PM</li>
+              <li>Friday 7AM - 9PM</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ml-2">Social</h5>
+            <a
+              class="btn btn-social-icon btn-instagram"
+              href="http://instagram.com/"
+            >
+              <i class="fa fa-instagram fa-3x"></i>
+            </a>
+            <a
+              class="btn btn-social-icon btn-facebook"
+              href="http://facebook.com/"
+            >
+              <i class="fa fa-facebook fa-3x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

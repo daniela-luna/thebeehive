@@ -99,91 +99,109 @@
       </div>
     </div>
 
-    <!-- <div class="accordion" id="faqAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="questionOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Do I need a membership to get started?
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse-show"
-            aria-labelledby="questionOne"
-            data-bs-parent="faqAccordion"
-          >
-            <div class="accordion-body">
-              <p>
-                No membership needed to get started! We offer a free trial for new
-                members. Click
-                <a>here</a>
-                to get your free trial.
-              </p>
-            </div>
-          </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container">
+    <div class="container">
       <div class="row">
         <div class="col">
           <h1 class="home-heading text-center">Frequently Asked Questions</h1>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col">
-          <h2 class="home-heading">Do I need a membership to get started?</h2>
-          <p>
-            No membership needed to get started! We offer a free trial for new
-            members. Click
-            <a>here</a>
-            to get your free trial.
-          </p>
-        </div>
-      </div>
+    </div>
+
+    <div class="container">
       <div class="row">
         <div class="col">
-          <div class="accordion" id="frequentQuestions">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  Can I upgrade my membership?
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse-show"
-                aria-labelledby="headingOne"
-                data-bs-parent="#frequentQuestions"
-              >
-                <div class="accordion-body">
-                  <p>
-                    Yes! If you love The Beehive and want more out of your
-                    membership, you can upgrade at any time. Simply give us a
-                    call at (123)-456-7890 or email us at
-                    thebeehive@thebeehive.com
-                  </p>
+          <div id="accordion">
+            <div class="card">
+              <div role="tab" class="card-header">
+                <h4>
+                  <a data-toggle="collapse" data-target="#faq1">
+                    Do I need a membership to get started?
+                  </a>
+                </h4>
+                <div class="collapse" id="faq1" data-parent="#accordion">
+                  <div class="card-body">
+                    <p class="d-none d-sm-block">
+                      No membership needed to get started! We offer a free trial
+                      for new members. Click
+                      <a>here</a>
+                      to get your free trial.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div role="tab" class="card-header">
+                <h4>
+                  <a
+                    class="collapsed"
+                    data-toggle="collapse"
+                    data-target="#faq2"
+                  >
+                    Can I upgrade my membership?
+                  </a>
+                </h4>
+                <div class="collapse" id="faq2" data-parent="#accordion">
+                  <div class="card-body">
+                    <p class="d-none d-sm-block">
+                      Yes! If you love The Beehive and want more out of your
+                      membership, you can upgrade at any time. Simply give us a
+                      call at (123)-456-7890 or email us at
+                      thebeehive@thebeehive.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div role="tab" class="card-header">
+                <h4>
+                  <a
+                    class="collapsed"
+                    data-toggle="collapse"
+                    data-target="#faq3"
+                  >
+                    Can I place my membership on pause?
+                  </a>
+                </h4>
+                <div class="collapse" id="faq3" data-parent="#accordion">
+                  <div class="card-body">
+                    <p class="d-none d-sm-block">
+                      Yes! If you need to put a pause on your membership, simply
+                      give us a call at (123)-456-7890 or email us at
+                      thebeehive@thebeehive.com.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div role="tab" class="card-header">
+                <h4>
+                  <a
+                    class="collapsed"
+                    data-toggle="collapse"
+                    data-target="#faq4"
+                  >
+                    Can I bring my dog with me?
+                  </a>
+                </h4>
+                <div class="collapse" id="faq4" data-parent="#accordion">
+                  <div class="card-body">
+                    <p class="d-none d-sm-block">
+                      Woof! We are dog-friendly. We welcome all dogs with proof
+                      of vaccination. Please email thebeehive@thebeehive.com
+                      with a picture of your pup and their medical records prior
+                      to bringing them to The Beehive.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <footer class="site-footer">
       <div class="container">
@@ -234,5 +252,23 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      var acc = document.getElementByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

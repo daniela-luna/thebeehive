@@ -44,6 +44,107 @@
       </div>
     </nav>
 
+    <div id="joinNowModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary text-white">
+            <h3 class="modal-title">Join Now</h3>
+            <button type="button" class="close" data-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form row">
+                  <div class="form-group col-6">
+                    <label class="sr-only" for="tourFirstName">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="buyNowFirstName"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="form-group col-6">
+                    <label class="sr-only" for="joinNowLastName">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="tourLastName"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                </div>
+                <div class="form row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="joinNowEmail">Email</label>
+                    <input
+                      type="email"
+                      class="form-control form-control-sm"
+                      id="joinNowEmail"
+                      placeholder="janedoe@email.com"
+                    />
+                  </div>
+                </div>
+                <div class="form row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="joinNowPhone">
+                      Phone Number (optional)
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="tourPhone"
+                      placeholder="120-456-7890"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-6 col-form-label">
+                    Which membership are you interested in?
+                  </label>
+                  <div class="col">
+                    <select
+                      name="startTime"
+                      id="startTime"
+                      class="form-control"
+                    >
+                      <option>Select...</option>
+                      <option value="1">Day Pass</option>
+                      <option value="2">Shared Desk</option>
+                      <option value="3">Dedicated Desk</option>
+                      <option value="4">Private Office</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-6 col-form-label" for="date">What is your preferred start date?</label>
+                  <div class="col-sm-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      name="date"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Join Now
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <section class="text-center">
         <h4 class="mb-4"><strong>Our Memberships</strong></h4>
@@ -72,8 +173,9 @@
               </div>
 
               <div class="card-footer bg-white py-3">
-                <button type="button" class="btn btn-info btn-sm">
-                  Buy now
+                <button data-toggle="modal"
+                data-target="#joinNowModal" type="button" class="btn btn-info btn-sm">
+                  Join Now
                 </button>
               </div>
             </div>
@@ -102,8 +204,9 @@
               </div>
 
               <div class="card-footer bg-white py-3">
-                <button type="button" class="btn btn-info btn-sm">
-                  Buy now
+                <button data-toggle="modal"
+                data-target="#joinNowModal" type="button" class="btn btn-info btn-sm">
+                  Join Now
                 </button>
               </div>
             </div>
@@ -131,8 +234,9 @@
                 </p>
               </div>
               <div class="card-footer bg-white py-3">
-                <button type="button" class="btn btn-info btn-sm">
-                  Buy now
+                <button data-toggle="modal"
+                data-target="#joinNowModal" type="button" class="btn btn-info btn-sm">
+                  Join Now
                 </button>
               </div>
             </div>
@@ -159,8 +263,9 @@
                 </p>
               </div>
               <div class="card-footer bg-white py-3">
-                <button type="button" class="btn btn-info btn-sm">
-                  Buy now
+                <button data-toggle="modal"
+                data-target="#joinNowModal" type="button" class="btn btn-info btn-sm">
+                  Join Now
                 </button>
               </div>
             </div>

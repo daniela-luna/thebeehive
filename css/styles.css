@@ -19,28 +19,64 @@
 }
 
 h1 {
-  color: white;
+  color: #343642;
   font-size: 70px;
 }
 
-h2 {
-  color: white;
+h2,
+h4,
+p {
+  color: #343642;
+}
+
+h5 {
+  color: #ef605b;
+}
+
+.footer-content {
+  color: #f9f7e2;
 }
 
 .site-footer {
-  background-color: gray;
+  background-color: #343642;
   color: white;
   padding: 20px;
 }
 
 .home-heading {
-  color: black;
+  color: #343642;
+}
+
+.home-cards {
+  background: #343642;
+  border-radius: 0;
+  border: none;
+}
+
+.card-text,
+.amenities-icons {
+  color: #f9f7e2;
 }
 
 .call-to-action {
-  color: black;
+  color: #343642;
 }
 
+.full-width-memberships {
+  background: #f9f7e2;
+}
+
+.full-width-free {
+  background: #f9f7e2;
+}
+
+.full-width-home {
+  background: #f9f7e2;
+}
+
+.full-width-amenities {
+  background: #ef605b;
+}
 a,
 a:hover {
   color: inherit;

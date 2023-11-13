@@ -21,7 +21,7 @@
     <title>The Beehive</title>
   </head>
 
-  <body>
+  <div>
     <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">The Beehive</a>
@@ -44,52 +44,100 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="home-heading mt-4">Contact The Beehive</h2>
-          <p class="mt-4">
-            We look forward to helping you! If you have a question, please
-            submit it using our form.
-          </p>
-          <br />
-          <h3 class="home-heading">Call Us</h3>
-          <p>(123)-456-7890</p>
-        </div>
-        <div class="col-md-6">
-          <div class="card mt-4 mb-5">
-            <div class="card-body">
-              <form id="contactForm">
-                <div class="row">
-                  <input
-                    class="form-control ml-3 mr-3"
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Name"
-                  />
+    <div id="freeTrialModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary text-white">
+            <h3 class="modal-title">Try a Free Day</h3>
+            <button type="button" class="close" data-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form row">
+                  <div class="form-group col-6">
+                    <label class="sr-only" for="tourFirstName">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="freeTrialFirstName"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="form-group col-6">
+                    <label class="sr-only" for="freeTrialLastName">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="freeTrialLastName"
+                      placeholder="Last Name"
+                    />
+                  </div>
                 </div>
-                <div class="row mt-4">
-                  <input
-                    class="form-control ml-3 mr-3"
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                  />
+                <div class="form row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="tourEmail">Email</label>
+                    <input
+                      type="email"
+                      class="form-control form-control-sm"
+                      id="freeTrialEmail"
+                      placeholder="janedoe@email.com"
+                    />
+                  </div>
                 </div>
-                <div class="row mt-4">
-                  <textarea
-                    class="form-control ml-3 mr-3"
-                    id="message"
-                    name="message"
-                    placeholder="Message"
-                    rows="8"
-                  ></textarea>
+                <div class="form row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="tourPhone">
+                      Phone Number (optional)
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="freeTrialPhone"
+                      placeholder="120-456-7890"
+                    />
+                  </div>
                 </div>
-                <div class="row mt-4">
-                  <button class="btn btn-primary ml-3" type="submit">
-                    Submit
+                <div class="form-group row">
+                  <label class="col-sm-6 col-form-label" for="date">Date</label>
+                  <div class="col-sm-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      name="date"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-6 col-form-label">
+                    Preferred Start Time
+                  </label>
+                  <div class="col">
+                    <select
+                      name="startTime"
+                      id="startTime"
+                      class="form-control"
+                    >
+                      <option>Select...</option>
+                      <option value="1">7 AM</option>
+                      <option value="2">8 AM</option>
+                      <option value="3">9 AM</option>
+                      <option value="4">10 AM</option>
+                      <option value="5">11 AM</option>
+                      <option value="6">Afternoon</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Try Us Out!
                   </button>
                 </div>
               </form>
@@ -99,101 +147,261 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1 class="home-heading text-center">Frequently Asked Questions</h1>
+    <div id="joinNowModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary text-white">
+            <h3 class="modal-title">Join Now</h3>
+            <button type="button" class="close" data-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form row">
+                  <div class="form-group col-6">
+                    <label class="sr-only" for="tourFirstName">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="buyNowFirstName"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="form-group col-6">
+                    <label class="sr-only" for="joinNowLastName">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="tourLastName"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                </div>
+                <div class="form row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="joinNowEmail">Email</label>
+                    <input
+                      type="email"
+                      class="form-control form-control-sm"
+                      id="joinNowEmail"
+                      placeholder="janedoe@email.com"
+                    />
+                  </div>
+                </div>
+                <div class="form row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="joinNowPhone">
+                      Phone Number (optional)
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      id="tourPhone"
+                      placeholder="120-456-7890"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-6 col-form-label">
+                    Which membership are you interested in?
+                  </label>
+                  <div class="col">
+                    <select
+                      name="startTime"
+                      id="startTime"
+                      class="form-control"
+                    >
+                      <option>Select...</option>
+                      <option value="1">Day Pass</option>
+                      <option value="2">Shared Desk</option>
+                      <option value="3">Dedicated Desk</option>
+                      <option value="4">Private Office</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-6 col-form-label" for="date">What is your preferred start date?</label>
+                  <div class="col-sm-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      name="date"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Join Now
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div id="accordion">
-            <div class="card">
-              <div role="tab" class="card-header">
-                <h4>
-                  <a data-toggle="collapse" data-target="#faq1">
-                    Do I need a membership to get started?
-                  </a>
-                </h4>
-                <div class="collapse" id="faq1" data-parent="#accordion">
-                  <div class="card-body">
-                    <p class="d-none d-sm-block">
-                      No membership needed to get started! We offer a free trial
-                      for new members. Click
-                      <a>here</a>
-                      to get your free trial.
-                    </p>
+    <div class="full-width-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="home-heading mt-4">Contact The Beehive</h2>
+            <p class="mt-4">
+              We look forward to helping you! If you have a question, please
+              submit it using our form.
+            </p>
+            <br />
+            <h3 class="home-heading">Call Us</h3>
+            <p>(123)-456-7890</p>
+          </div>
+          <div class="col-md-6">
+            <div class="card mt-4 mb-5">
+              <div class="card-body">
+                <form id="contactForm">
+                  <div class="row">
+                    <input
+                      class="form-control ml-3 mr-3"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div class="row mt-4">
+                    <input
+                      class="form-control ml-3 mr-3"
+                      type="text"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="row mt-4">
+                    <textarea
+                      class="form-control ml-3 mr-3"
+                      id="message"
+                      name="message"
+                      placeholder="Message"
+                      rows="8"
+                    ></textarea>
+                  </div>
+                  <div class="row mt-4">
+                    <button class="btn btn-primary ml-3" type="submit">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="full-width-red pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="home-heading text-center">Frequently Asked Questions</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-4 pb-5">
+        <div class="row">
+          <div class="col">
+            <div id="accordion">
+              <div class="card">
+                <div role="tab" class="card-header">
+                  <h4>
+                    <a data-toggle="collapse" data-target="#faq1">
+                      Do I need a membership to get started?
+                    </a>
+                  </h4>
+                  <div class="collapse" id="faq1" data-parent="#accordion">
+                    <div class="card-body">
+                      <p class="d-none d-sm-block">
+                        No membership needed to get started! We offer a free trial
+                        for new members. Click
+                        <a>here</a>
+                        to get your free trial.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div role="tab" class="card-header">
-                <h4>
-                  <a
-                    class="collapsed"
-                    data-toggle="collapse"
-                    data-target="#faq2"
-                  >
-                    Can I upgrade my membership?
-                  </a>
-                </h4>
-                <div class="collapse" id="faq2" data-parent="#accordion">
-                  <div class="card-body">
-                    <p class="d-none d-sm-block">
-                      Yes! If you love The Beehive and want more out of your
-                      membership, you can upgrade at any time. Simply give us a
-                      call at (123)-456-7890 or email us at
-                      thebeehive@thebeehive.com
-                    </p>
+              <div class="card">
+                <div role="tab" class="card-header">
+                  <h4>
+                    <a
+                      class="collapsed"
+                      data-toggle="collapse"
+                      data-target="#faq2"
+                    >
+                      Can I upgrade my membership?
+                    </a>
+                  </h4>
+                  <div class="collapse" id="faq2" data-parent="#accordion">
+                    <div class="card-body">
+                      <p class="d-none d-sm-block">
+                        Yes! If you love The Beehive and want more out of your
+                        membership, you can upgrade at any time. Simply give us a
+                        call at (123)-456-7890 or email us at
+                        thebeehive@thebeehive.com
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div role="tab" class="card-header">
-                <h4>
-                  <a
-                    class="collapsed"
-                    data-toggle="collapse"
-                    data-target="#faq3"
-                  >
-                    Can I place my membership on pause?
-                  </a>
-                </h4>
-                <div class="collapse" id="faq3" data-parent="#accordion">
-                  <div class="card-body">
-                    <p class="d-none d-sm-block">
-                      Yes! If you need to put a pause on your membership, simply
-                      give us a call at (123)-456-7890 or email us at
-                      thebeehive@thebeehive.com.
-                    </p>
+              <div class="card">
+                <div role="tab" class="card-header">
+                  <h4>
+                    <a
+                      class="collapsed"
+                      data-toggle="collapse"
+                      data-target="#faq3"
+                    >
+                      Can I place my membership on pause?
+                    </a>
+                  </h4>
+                  <div class="collapse" id="faq3" data-parent="#accordion">
+                    <div class="card-body">
+                      <p class="d-none d-sm-block">
+                        Yes! If you need to put a pause on your membership, simply
+                        give us a call at (123)-456-7890 or email us at
+                        thebeehive@thebeehive.com.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div role="tab" class="card-header">
-                <h4>
-                  <a
-                    class="collapsed"
-                    data-toggle="collapse"
-                    data-target="#faq4"
-                  >
-                    Can I bring my dog with me?
-                  </a>
-                </h4>
-                <div class="collapse" id="faq4" data-parent="#accordion">
-                  <div class="card-body">
-                    <p class="d-none d-sm-block">
-                      Woof! We are dog-friendly. We welcome all dogs with proof
-                      of vaccination. Please email thebeehive@thebeehive.com
-                      with a picture of your pup and their medical records prior
-                      to bringing them to The Beehive.
-                    </p>
+              <div class="card">
+                <div role="tab" class="card-header">
+                  <h4>
+                    <a
+                      class="collapsed"
+                      data-toggle="collapse"
+                      data-target="#faq4"
+                    >
+                      Can I bring my dog with me?
+                    </a>
+                  </h4>
+                  <div class="collapse" id="faq4" data-parent="#accordion">
+                    <div class="card-body">
+                      <p class="d-none d-sm-block">
+                        Woof! We are dog-friendly. We welcome all dogs with proof
+                        of vaccination. Please email thebeehive@thebeehive.com
+                        with a picture of your pup and their medical records prior
+                        to bringing them to The Beehive.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -201,6 +409,49 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="full-width-light pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="home-heading text-center">Ready to Get Started?</h1>
+          </div>
+        </div>
+        <div class="row mx-auto">
+          <div class="col mt-4 mb-5">
+             <div class="card text-center">
+                <div class="card-body">
+                   <i class="fa fa-ticket fa-5x mb-4" aria-hidden="true"></i>
+                   <p>
+                      Try us out with a free day pass. New members only.
+                   </p>
+                </div>
+                <div class="card-footer bg-white py-3 align-self-center">
+                   <button data-toggle="modal"
+                   data-target="#freeTrialModal" type="button" class="btn btn-info btn-sm">
+                      Try a Free Day
+                   </button>
+                </div>
+             </div>
+          </div>
+          <div class="col mt-4 mb-5">
+            <div class="card text-center">
+               <div class="card-body">
+                  <i class="fa fa-arrow-circle-right fa-5x mb-4" aria-hidden="true"></i>
+                  <p>
+                     Ready to join? Get started today. 
+                  </p>
+               </div>
+               <div class="card-footer bg-white py-3 align-self-center">
+                  <button data-toggle="modal"
+                  data-target="#joinNowModal" type="button" class="btn btn-info btn-sm">
+                     Join Now
+                  </button>
+               </div>
+            </div>
+         </div>
+       </div>
     </div>
 
     <footer class="site-footer">

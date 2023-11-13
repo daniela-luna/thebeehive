@@ -47,8 +47,12 @@ h5 {
   color: #343642;
 }
 
+.who-we-are-heading {
+  color: #ef605b;
+}
+
 .home-cards {
-  background: #343642;
+  background: #ef605b;
   border-radius: 0;
   border: none;
 }
@@ -62,21 +66,14 @@ h5 {
   color: #343642;
 }
 
-.full-width-memberships {
+.full-width-light {
   background: #f9f7e2;
 }
 
-.full-width-free {
-  background: #f9f7e2;
-}
-
-.full-width-home {
-  background: #f9f7e2;
-}
-
-.full-width-amenities {
+.full-width-red {
   background: #ef605b;
 }
+
 a,
 a:hover {
   color: inherit;
